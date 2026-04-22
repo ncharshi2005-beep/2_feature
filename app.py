@@ -17,5 +17,5 @@ def binary_search(arr, target):
 
 # Example usage:
 my_list = [1, 3, 5, 7, 9]
-print(binary_search(my_list, 3)) # Output: 1
+//this
 print(binary_search(my_list, -1)) # Output: -1
