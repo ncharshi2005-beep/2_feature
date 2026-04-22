@@ -1,21 +1,22 @@
 def binary_search(arr, target):
-Â  Â  low = 0
-Â  Â  high = len(arr) - 1
+    low = 0
+    high = len(arr) - 1
 
-Â  Â  while low <= high:
-Â  Â  Â  Â  mid = (low + high) // 2
-Â  Â  Â  Â  guess = arr[mid]
+    while low <= high:
+        mid = (low + high) // 2
+        guess = arr[mid]
 
-Â  Â  Â  Â  if guess == target:
-Â  Â  Â  Â  Â  Â  return midÂ  # Found the item! Returning its index.
-Â  Â  Â  Â  if guess > target:
-Â  Â  Â  Â  Â  Â  high = mid - 1Â  # Too high, look left.
-Â  Â  Â  Â  else:
-Â  Â  Â  Â  Â  Â  low = mid + 1Â  Â # Too low, look right.
+        if guess == target:
+            return mid  # Found the item! Returning its index.
+        if guess > target:
+            high = mid - 1  # Too high, look left.
+        else:
+            low = mid + 1   # Too low, look right.
 
-Â  Â  return -1Â  # Target not found
+    return -1  # Target not found
 
 # Example usage:
 my_list = [1, 3, 5, 7, 9]print(binary_search(my_list, -1)) # Output: -1
-print(binary_search(my_list, 3))Â 
-print(binary_search(my_list, 5))Â 
+print(binary_search(my_list, 3)) 
+print(binary_search(my_list, 5)) my_list = [1, 3, 5, 7, 9]
+print(binary_search(my_list, 3)) 
