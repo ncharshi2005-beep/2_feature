@@ -1,0 +1,29 @@
+Add app.py and commit it
+
+
+git init
+2. Check and Create a Branch
+Verify your active branch and create a new one named feature-branch:Bashgit branch
+git branch feature-branch
+3. Switch to the Feature Branch
+Move into your new branch to start working independently:Bashgit checkout feature-branch
+4. Make and Commit Changes in Feature Branch
+Modify a file (e.g., file1.txt), stage it, and commit the changes:Bashecho "New feature content" >> file1.txt
+git add .
+git commit -m "Added new feature in feature branch"
+5. Create a Conflict in the Main Branch
+Switch back to the main branch and modify the same line of the same file to practice conflict resolution:Bashgit checkout master
+echo "Main branch conflicting content" >> file1.txt
+git add .
+git commit -m "Updated file in main branch"
+6. Merge the Branches
+Attempt to integrate the feature branch into the main branch:Bashgit merge feature-branch
+Note: Git will report a CONFLICT (content): Merge conflict in file1.7. Resolve Merge Conflicts
+You must manually choose which changes to keep:Option A (Manual): Open the file and remove the Git markers (<<<<<<<, =======, >>>>>>>).Option B (Tool): Use a tool like TortoiseGitMerge. Right-click the conflict and select "Use text block from right before left" (or your preferred version), then click Save.8. Finalize the Merge
+After resolving the conflict, stage the file and finish the commit:Bashgit add file1.txt
+git commit -m "File1 Merged"
+9. Verify and Clean Up
+Check the history and delete the now-integrated branch:Bashgit log --oneline
+git branch -d feature-branch
+
+git mergetool, right side, use text block from right before left
