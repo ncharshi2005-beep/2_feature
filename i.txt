@@ -27,3 +27,23 @@ Check the history and delete the now-integrated branch:Bashgit log --oneline
 git branch -d feature-branch
 
 git mergetool, right side, use text block from right before left
+
+
+
+
+
+
+
+Aim:
+To understand Git branching and learn how parallel development is managed using branches.
+
+Theory:
+
+
+Branching: Represents an independent line of development, allowing work on new features or bug fixes without affecting the main codebase.
+
+
+Isolation: Changes made in a new branch are isolated until they are merged, enabling safe experimentation.
+
+
+Merge Conflicts: Occur when Git cannot automatically combine changes, requiring the user to resolve differences manually.
